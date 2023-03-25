@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      li {
+        list-style-type: none;
+      }
+      body {
+        /* width: 1440px; */
+        max-width: 100vw;
+        color:  hsl(0, 0%, 8%);
+        background-color: hsl(0, 0%, 98%)
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 1rem;
+      }
+      .nav-link_logo {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        width: 60%;
+        margin-left: 5vw;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .nav-links li {
+        margin-left: 2.5rem;
+      }
+      .nav-btns {
+        display: flex;
+        align-items: center;
+        width: 30%;
+        justify-content: flex-end;
+        margin-right: 5vw;
+      }
+      .nav-btns li {
+        margin-left: 2.5rem;
+      }
+      .nav-register {
+        border: 1px solid black;
+        /* color: white; */
+        border-radius: 15px;
+        padding: 0.8rem 1.7rem;
+      }
+      .nav_link {
+        align-content: center;
+        vertical-align: middle;
+      }
+      .nav_link img {
+        margin-left: 0.5rem;
+        align-self: center;
+        vertical-align: center;
+      }
+      .drop-down {
+        position: relative;
+        /* top: 10px; */
+      }
+      .drop-down:hover .sub-menu{
+        display: block;
+      }
+      .drop-down:hover img{
+        /* display: none; */
+        rotate: 180deg;
+      }
+      .sub-menu{
+        position: absolute;
+        display: none;
+        margin-right: 50px;
+        background-color: red;
+        padding : 0;
+        width: 120px;
+        background-color: white;
+        box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2); 
+        border-radius: 10px;
+        right: -60%;
+        /* top: 30px; */
+        /* top: 20px; */
+        /* display: none; */
+      }
+      .sub-menu2{
+        width : 90px;
+      }
+      .sub-menu li{
+        margin: .5rem;
+        padding-top: .3rem;
+        padding-left: .5rem;  
+        /* display: flex; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        /* width: 250px; */
+      }
+      .sub-menu li img{
+        margin-right: .5rem;
+      }
+      .sub-menu li a{
+        vertical-align: middle;
+        display: flex;
+        align-items: center;
+      }
+      /* .sub-menu li img{
+        margin: 5px;
+      } */
+    .drop-down:hover .sub-menu{
+      display: block;
+    }
+    main{
+      display: flex;
+      width: 80%;
+      margin: 3rem auto ;
+      /* height: 100vh; */
+      /* padding: 3rem 4rem 5rem 2rem; */
+    }
+    .main-img{
+      width: 45%;
+    }
+    .main-img img{
+      width: 80%;
+      /* height: 100%; */
+    }
+    .main-content{
+      width: 45%;
+    }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-link_logo">
+        <img src="images/logo.svg" alt="" class="nav-logo" />
+        <ul class="nav-links">image-hero-desktop.png
+          <li class="drop-down">
+            <a href="#" class="nav_link"
+              >Features <img src="images/icon-arrow-down.svg"
+            /></a>
+            <div class="sub-menu sub-menu1">
+              <ul>
+                <li>
+                  <a href="#"><img src="images/icon-todo.svg" />Todo List</a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/icon-calendar.svg" />Calendar</a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/icon-reminders.svg" />Reminders</a
+                  >
+                </li>
+                <li>
+                  <a href="#"><img src="images/icon-planning.svg" />Planning</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="drop-down">
+            <a href="#" class="nav_link"
+              >Company<img src="images/icon-arrow-down.svg"
+            /></a>
+            <div class="sub-menu sub-menu2">
+              <ul>
+                <li>
+                  <a href="#">History</a>
+                </li>
+                <li>
+                  <a href="#">Our Team</a>
+                </li>
+                <li>
+                  <a href="#">Blog</a>
+                </li>
+                
+              </ul>
+            </div> 
+          </li>
+          </li>
+          <li><a href="#" class="nav_link">Careers</a></li>
+          <li><a href="#" class="nav_link">About</a></li>
+        </ul>
+      </div>
+      <ul class="nav-btns">
+        <li class="nav-btn nav-login">Login</li>
+        <li class="nav-btn nav-register">Register</li>
+      </ul>
+    </nav>
+    <main>
+      <div class="main-content">
+        <h1>Make Remote Work</h1>
+        <p>Get your team in sync, no matter your location, Streamline processes, create team rituals , nad watch productiviy soar.</p>
+        <button>Learn more</button>
+        <div>
+          <ul>
+            <li><img src="images/client-databiz.svg" alt=""></li>
+            <li><img src="images/client-audiophile.svg" alt=""></li>
+            <li><img src="images/client-meet.svg" alt=""></li>
+            <li><img src="images/client-maker.svg" alt=""></li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-img">
+        <div><img src="images/image-hero-desktop.png" alt=""></div>
+      </div>
+    </main>
+  </body>
+</html>
