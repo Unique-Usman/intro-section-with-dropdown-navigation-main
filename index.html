@@ -16,13 +16,7 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
+      @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
       *{
         padding: 0;
         margin: 0;
@@ -35,11 +29,30 @@
         /* width: 1440px; */
         max-width: 100vw;
         color:  hsl(0, 0%, 8%);
-        background-color: hsl(0, 0%, 98%)
+        background-color: hsl(0, 0%, 98%);
+        font-size: 1.3rem;
+        font-family: 'Epilogue', sans-serif;
+       
       }
       a {
         text-decoration: none;
-        color: black;
+        color: hsl(0, 0%, 41%);
+        cursor: pointer;
+
+      }
+      button{
+        cursor: pointer;
+      }
+      p{
+         color: hsl(0, 0%, 41%);
+      }
+      p:hover{
+        color:hsl(0, 0%, 8%);
+         transition: all 1s ease-out;
+      }
+      a:hover{
+        color:hsl(0, 0%, 8%);
+        transition: all 1s ease-out;
       }
       nav {
         display: flex;
@@ -104,7 +117,7 @@
         margin-right: 50px;
         background-color: red;
         padding : 0;
-        width: 120px;
+        width: 170px;
         background-color: white;
         box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2); 
         border-radius: 10px;
@@ -114,7 +127,7 @@
         /* display: none; */
       }
       .sub-menu2{
-        width : 90px;
+        width : 150px;
       }
       .sub-menu li{
         margin: .5rem;
@@ -141,8 +154,12 @@
     }
     main{
       display: flex;
-      width: 80%;
-      margin: 3rem auto ;
+      width: 90%;
+      margin: auto;
+      margin-top : 2rem;
+      align-items: center;
+      justify-content: space-between;
+
       /* height: 100vh; */
       /* padding: 3rem 4rem 5rem 2rem; */
     }
@@ -155,14 +172,52 @@
     }
     .main-content{
       width: 45%;
+      padding-left: 10rem;
     }
+    .main-content h1{
+      font-size: 5rem;
+      padding-bottom: 3rem;
+      
+    }
+    .main-content h1 span{
+      display: block;
+    }
+    .main-content p{
+      width: 75%;
+    }
+    .btn-learn-more{
+      padding : 1.2rem;
+      border-radius: 10px;
+      border: none;
+      background-color:  hsl(0, 0%, 8%);
+      color: white;
+      font-size: 1rem;
+      margin: 3rem 0;
+     
+      border: 1px solid hsl(0, 0%, 8%);
+      
+    }
+    .client{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 3rem
+    }
+    .btn-learn-more:hover{
+      transform: translate(10px, 5px);
+      background-color: white;
+      border: 1px solid hsl(0, 0%, 41%);
+      color: black;
+      transition: all 0.5 ease-out;
+      position: relative;
+      }
     </style>
   </head>
   <body>
     <nav class="nav">
       <div class="nav-link_logo">
         <img src="images/logo.svg" alt="" class="nav-logo" />
-        <ul class="nav-links">image-hero-desktop.png
+        <ul class="nav-links">
           <li class="drop-down">
             <a href="#" class="nav_link"
               >Features <img src="images/icon-arrow-down.svg"
@@ -211,16 +266,16 @@
       </div>
       <ul class="nav-btns">
         <li class="nav-btn nav-login">Login</li>
-        <li class="nav-btn nav-register">Register</li>
+        <li class="nav-btn nav-register"><a>Register</a></li>
       </ul>
     </nav>
     <main>
       <div class="main-content">
-        <h1>Make Remote Work</h1>
-        <p>Get your team in sync, no matter your location, Streamline processes, create team rituals , nad watch productiviy soar.</p>
-        <button>Learn more</button>
+        <h1>Make <span>Remote Work</span></h1>
+        <p>Get your team in sync, no matter your location, Streamline processes, create team rituals , an d watch productiviy soar.</p>
+        <button class="btn-learn-more">Learn more</button>
         <div>
-          <ul>
+          <ul class="client">
             <li><img src="images/client-databiz.svg" alt=""></li>
             <li><img src="images/client-audiophile.svg" alt=""></li>
             <li><img src="images/client-meet.svg" alt=""></li>
